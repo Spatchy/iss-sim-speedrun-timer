@@ -29,6 +29,7 @@ function doClockRun() {
 }
 
 function start() {
+    $("#display").remove();
     $("body").append(displayHtml);
     $("#speedrun-time").css("color", "#2aff00");
     doClockRun();

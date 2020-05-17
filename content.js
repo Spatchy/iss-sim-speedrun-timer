@@ -9,10 +9,7 @@ var startTime;
 var timer = 0;
 
 function doClockRun() {
-    console.log($("#gameStateHolder").html());
-    console.log("attempted a clock run");
     if($("#gameStateHolder").html() == "false"){ //if game has started
-        console.log("game start!")
         startTime = Date.now();
         setInterval(function () {
             if($("#gameStateHolder").html() == "false"){
@@ -20,7 +17,6 @@ function doClockRun() {
                 timer = Date.now() - startTime;
             }
             else{
-                console.log("Final Time: " + timer);
             }
         }, 1);        
     }
